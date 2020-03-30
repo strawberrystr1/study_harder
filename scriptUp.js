@@ -12,5 +12,3 @@ result = result ** 3;
 
 console.log(result);
 console.log(result.toString()[0], result.toString()[1]);
-
-
