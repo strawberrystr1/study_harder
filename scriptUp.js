@@ -1,14 +1,30 @@
-let num = 266219;
-let arr = [];
-num = num.toString();
+'use strict';
 
-for (let i of num) {
-    arr.push(Number(i));
+function day(lang) {
+    if (lang === 'ru') {
+       console.log('Понедельник, вторник, среда, четверг, пятница, суббота, воскресенье');
+    } else {
+        console.log('Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday');
+    }
 }
 
-let result = arr.reduce((result, currentValue) => result * currentValue);
+day('ru');
 
-result = result ** 3;
+let lang ='en';
+switch (lang) {
+    case 'ru':
+        console.log('Понедельник, вторник, среда, четверг, пятница, суббота, воскресенье');
+        break;
+    case 'en':
+        console.log('Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday');
+        break;
+}
 
-console.log(result);
-console.log(result.toString()[0], result.toString()[1]);
+
+let days = [['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'], ['Понедельник', 'вторник', 'среда', 'четверг', 'пятница', 'суббота', 'воскресенье']];
+console.log('en', days[1]);
+console.log('ru', days[1]);
+
+let namePerson = 'Вася';
+let person = namePerson === 'Артем' ? console.log('Директор') : namePerson === 'Максим' ? console.log('Преподаватель') : console.log('студент');
+
